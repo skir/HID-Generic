@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B45AC188-8287-4984-B492-AE47C19694C7}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)nrf5x.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)nrf5x.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>config;E:\nRF\components;pca10056/blank/config;E:\nRF/components/libraries/scheduler;E:\nRF/components/libraries/queue;E:\nRF/components/libraries/fifo;E:\nRF/components/libraries/strerror;E:\nRF/components/drivers_nrf/delay;E:\nRF/components/toolchain/cmsis/include;E:\nRF/components/libraries/util;E:\nRF/components/libraries/bsp;E:\nRF/components/drivers_nrf/uart;E:\nRF/components/libraries/usbd/class/hid/generic;E:\nRF/components/libraries/usbd/class/hid/kbd;E:\nRF/components/drivers_nrf/usbd;E:\nRF/components/libraries/usbd/class/hid;E:\nRF/components/libraries/hardfault/nrf52;E:\nRF/components/libraries/hardfault;E:\nRF/components/libraries/uart;E:\nRF/components/device;E:\nRF/components/libraries/log;E:\nRF/components/libraries/button;E:\nRF/components/libraries/timer;E:\nRF/components/libraries/usbd;E:\nRF/components/drivers_nrf/gpiote;E:\nRF/external/segger_rtt;E:\nRF/components/drivers_nrf/power;E:\nRF/components/drivers_nrf/nrf_soc_nosd;E:\nRF/components/toolchain;E:\nRF/components/libraries/atomic;E:\nRF/components/boards;E:\nRF/components/drivers_nrf/hal;E:\nRF/components/drivers_nrf/systick;E:\nRF/components/libraries/usbd/config;E:\nRF/components/drivers_nrf/common;E:\nRF/components/drivers_nrf/clock;E:\nRF/components/libraries/usbd/class/hid/mouse;E:\nRF/components/toolchain/gcc;E:\nRF/components/libraries/log/src;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);DEBUG=1;BOARD_PCA10056 ;CONFIG_GPIO_AS_PINRESET ;DEBUG ;DEBUG_NRF ;NRF52840_XXAA ;SWI_DISABLE0</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>config;C:/Users/ilias/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/VendorSamples/components;pca10056/blank/config;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/scheduler;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/queue;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/fifo;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/strerror;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/delay;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/toolchain/cmsis/include;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/util;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/bsp;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/uart;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd/class/hid/generic;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd/class/hid/kbd;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/usbd;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd/class/hid;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/hardfault/nrf52;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/hardfault;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/uart;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/device;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/log;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/button;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/timer;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd;;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/gpiote;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/external/segger_rtt;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/power;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/nrf_soc_nosd;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/toolchain;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/atomic;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/boards;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/hal;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/systick;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd/config;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/common;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/drivers_nrf/clock;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/usbd/class/hid/mouse;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/toolchain/gcc;C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x/nRF5x/components/libraries/log/src;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);NDEBUG=1;RELEASE=1;BOARD_PCA10056 ;CONFIG_GPIO_AS_PINRESET ;DEBUG ;DEBUG_NRF ;NRF52840_XXAA ;SWI_DISABLE0</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\boards\boards.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\clock\nrf_drv_clock.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\common\nrf_drv_common.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\gpiote\nrf_drv_gpiote.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\nrf_soc_nosd\nrf_nvic.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\nrf_soc_nosd\nrf_soc.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\power\nrf_drv_power.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\systick\nrf_drv_systick.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\uart\nrf_drv_uart.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\drivers_nrf\usbd\nrf_drv_usbd.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\bsp\bsp.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\bsp\bsp_nfc.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\button\app_button.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\fifo\app_fifo.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\hardfault\hardfault_implementation.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\hardfault\nrf52\handler\hardfault_handler_gcc.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\log\src\nrf_log_backend_serial.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\log\src\nrf_log_frontend.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\queue\nrf_queue.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\scheduler\app_scheduler.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\strerror\nrf_strerror.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\timer\app_timer.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\uart\app_uart_fifo.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\app_usbd.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\app_usbd_core.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\app_usbd_string_desc.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\class\hid\app_usbd_hid.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\class\hid\generic\app_usbd_hid_generic.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\class\hid\kbd\app_usbd_hid_kbd.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\usbd\class\hid\mouse\app_usbd_hid_mouse.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_error.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_error_weak.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\app_util_platform.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\libraries\util\nrf_assert.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\softdevice\common\softdevice_handler\softdevice_handler.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\system_nrf52840.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\RTT_Syscalls_GCC.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\SEGGER_RTT.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\external\segger_rtt\SEGGER_RTT_printf.c" />
+    <ClCompile Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\StartupFiles\startup_nRF52x.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\compiler_abstraction.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51422_peripherals.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51802_peripherals.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51822_peripherals.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51_bitfields.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51_deprecated.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51_to_nrf52.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf51_to_nrf52840.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52832_peripherals.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52840.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52840_bitfields.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52840_peripherals.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52_bitfields.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52_name_change.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\device\nrf52_to_nrf52840.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\softdevice\common\softdevice_handler\ant_stack_handler_types.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\softdevice\common\softdevice_handler\ble_stack_handler_types.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\softdevice\common\softdevice_handler\softdevice_handler.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\arm_common_tables.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\arm_const_structs.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\arm_math.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\cmsis_armcc.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\cmsis_armcc_V6.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\cmsis_gcc.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cm0.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cm0plus.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cm3.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cm4.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cm7.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cmFunc.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cmInstr.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_cmSimd.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_sc000.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\cmsis\include\core_sc300.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\system_nrf51.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\system_nrf52.h" />
+    <ClInclude Include="C:\Users\ilias\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\components\toolchain\system_nrf52840.h" />
+    <ClInclude Include="config\app_usbd_string_config.h" />
+    <ClInclude Include="pca10056\blank\config\sdk_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nrf5x.props" />
+    <None Include="USB_HID_Generic_VisualGDB-Debug.vgdbsettings" />
+    <None Include="USB_HID_Generic_VisualGDB-Release.vgdbsettings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="nrf5x.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
